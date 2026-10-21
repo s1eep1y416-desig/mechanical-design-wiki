@@ -1,0 +1,28 @@
+{
+  "name": "mechanical-design-wiki",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "以《机械设计》（第十版）为知识框架的开放学习笔记",
+  "scripts": {
+    "dev": "vitepress dev docs --host 127.0.0.1",
+    "build": "vitepress build docs",
+    "preview": "vitepress preview docs --host 127.0.0.1",
+    "dev:theory": "vitepress dev theory/docs --host 127.0.0.1",
+    "build:theory": "vitepress build theory/docs",
+    "preview:theory": "vitepress preview theory/docs --host 127.0.0.1",
+    "feishu": "node tools/feishu-sync.mjs && node tools/feishu-merge.mjs",
+    "feishu:merge": "node tools/feishu-merge.mjs",
+    "feishu:latex": "node tools/feishu-sync.mjs --latex && node tools/feishu-merge.mjs --latex",
+    "feishu:upload": "bash tools/feishu-upload-latex.sh",
+    "feishu:setup": "bash tools/feishu-setup.sh"
+  },
+  "devDependencies": {
+    "markdown-it-mathjax3": "^4.3.2",
+    "vitepress": "1.6.4",
+    "vue": "^3.5.13"
+  },
+  "dependencies": {
+    "katex": "^0.16.22"
+  }
+}

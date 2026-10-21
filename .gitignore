@@ -1,0 +1,24 @@
+node_modules/
+docs/.vitepress/dist/
+docs/.vitepress/cache/
+.npm-cache/
+.tools/
+.DS_Store
+*.log
+
+.env.feishu.local
+.env.local
+
+# Local previews, generated exports, and the separate mechanical-principles draft
+preview*.png
+.tmp-*.mjs
+.tools-*.mjs
+feishu/
+feishu-latex/
+theory/
+
+# Local Feishu publishing and audit material
+.env.feishu.example
+tools/
+review/
+飞书同步说明.md
