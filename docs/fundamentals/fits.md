@@ -110,3 +110,12 @@ $$
 - [第 15 章：轴](/chapters/15-shafts)：分别确定各轴段的尺寸公差、几何公差和表面要求。
 
 选配合时先确定工作要求，再查极限尺寸并核算装配效果。尺寸公差与配合的定义和图示可参阅 [MISUMI 技术说明](https://us.misumi-ec.com/blog/shaft-hole-tolerances-for-clearance-interference-fits/)；标准值从[国家标准全文公开系统](https://openstd.samr.gov.cn/bzgk/gb/)检索核对。
+
+
+## 结构与设计图解
+
+### 三类配合的公差带关系
+
+<DesignFigure id="fits-overview" />
+
+示例为说明相对位置，非标准公差代号；X=D−d，X正为间隙、负为过盈。

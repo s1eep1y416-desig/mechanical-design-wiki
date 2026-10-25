@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import FigureFrame from './FigureFrame.vue'
 import { computed } from 'vue'
 
 type ChartType = 'sn' | 'limit' | 'contact' | 'stribeck' | 'wear' | 'bolt' | 'belt' | 'chain' | 'efficiency' | 'spring' | 'bearing'
@@ -94,6 +95,7 @@ const meta = computed(() => {
 </script>
 
 <template>
+  <FigureFrame :title="meta.title">
   <figure class="curve-chart" :data-chart-type="type">
     <header>
       <span>{{ meta.eyebrow }}</span>
@@ -266,6 +268,7 @@ const meta = computed(() => {
 
     <figcaption>{{ meta.caption }} <em>（按公式关系重绘，非精确刻度）</em></figcaption>
   </figure>
+  </FigureFrame>
 </template>
 
 <style scoped>

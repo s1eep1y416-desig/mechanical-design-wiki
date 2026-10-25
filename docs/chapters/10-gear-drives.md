@@ -325,3 +325,28 @@ $$
 - 直齿轮 $F_t=2T_1/d_1$，$F_r=F_t\tan\alpha$；斜齿轮还有 $F_a=F_t\tan\beta$；
 - 接触强度控制点蚀，弯曲强度控制折断；
 - 参数选择要综合齿数、模数、齿宽、螺旋角和精度。
+
+
+## 参数实验
+
+<DesignCalculator type="gear" />
+
+## 结构与设计图解
+
+### 渐开线齿轮的四个圆
+
+<DesignFigure id="gear-dimensions" />
+
+标准外齿轮d=mz，db=d cosα，da=d+2m，df=d−2.5m；基圆与齿根圆不能混淆。
+
+### 轮齿弯曲、点蚀与胶合
+
+<DesignFigure id="gear-failures" />
+
+齿根弯曲裂纹、节线附近点蚀与沿滑动方向胶合属于不同失效形式。
+
+### 斜齿轮的螺旋齿线与分力
+
+<DesignFigure id="helical-contact" />
+
+平行轴外啮合斜齿轮旋向相反；Fa=Ft tanβ，轴向力正负仍由旋向与转向共同确定。

@@ -310,7 +310,7 @@ const raw: Formula[] = [
   {
     name: '弯扭合成强度',
     cat: '轴系',
-    latex: String.raw`\sigma_{ca}=\sqrt{\sigma_b^2+3(\alpha\tau_T)^2}\le[\sigma_{-1}]`,
+    latex: String.raw`\sigma_{ca}=\sqrt{\sigma_b^2+4(\alpha\tau_T)^2}\le[\sigma_{-1}]`,
     note: 'α 为转矩循环特性折合系数：稳定转矩约 0.3，脉动约 0.6，频繁正反转取 1。',
     chapter: '15',
     link: '/chapters/15-shafts',
@@ -348,7 +348,7 @@ const raw: Formula[] = [
   {
     name: '弹簧刚度',
     cat: '弹簧',
-    latex: String.raw`F'=\frac{Gd}{8D^3n}`,
+    latex: String.raw`F'=\frac{Gd^4}{8D^3n}`,
     note: '增加簧丝直径或减少有效圈数会提高刚度；增大中径会显著降低刚度。',
     chapter: '16',
     link: '/chapters/16-springs',

@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import FigureFrame from './FigureFrame.vue'
 import { computed, useId } from 'vue'
 import { involuteGearPath } from '../utils/gear'
 
@@ -60,6 +61,7 @@ const arrow = (kind: string) => `url(#${uid}-${kind})`
 </script>
 
 <template>
+  <FigureFrame :title="meta.title">
   <figure class="force-diagram" :data-force-type="type">
     <header><span>FORCE ANALYSIS</span><h4>{{ meta.title }}</h4></header>
     <svg viewBox="0 0 720 380" role="img" :aria-labelledby="`${uid}-title ${uid}-desc`">
@@ -219,6 +221,7 @@ const arrow = (kind: string) => `url(#${uid}-${kind})`
     <ol><li v-for="step in meta.steps" :key="step">{{ step }}</li></ol>
     <figcaption>{{ meta.note }}</figcaption>
   </figure>
+  </FigureFrame>
 </template>
 
 <style scoped>

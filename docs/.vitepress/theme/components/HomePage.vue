@@ -156,6 +156,7 @@ function chapterSlug(n: string) {
           整理成一张可检索、可串联、可长期复习的地图。
         </p>
         <div class="home-hero__actions">
+          <a class="btn btn--primary" :href="withBase('/figures/')">查看 82 张工程图解 ↗</a>
           <a class="btn btn--primary" :href="withBase('/guide/')">
             开始学习
             <span>→</span>
@@ -171,7 +172,7 @@ function chapterSlug(n: string) {
         </div>
         <dl class="home-hero__stats">
           <div><dt>18</dt><dd>章 · 完整目录</dd></div>
-          <div><dt>5</dt><dd>篇 · 知识分区</dd></div>
+          <div><dt>82</dt><dd>张 · 工程图解</dd></div>
           <div><dt>{{ totalFormulas }}</dt><dd>个 · 核心公式</dd></div>
           <div><dt>5</dt><dd>个 · 高频计算链</dd></div>
         </dl>

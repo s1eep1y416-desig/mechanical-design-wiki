@@ -12,12 +12,18 @@ import FormulaQuickSearch from './components/FormulaQuickSearch.vue'
 import FitComparison from './components/FitComparison.vue'
 import ForceDiagram from './components/ForceDiagram.vue'
 import UnitConvention from './components/UnitConvention.vue'
+import DesignFigure from './components/DesignFigure.vue'
+import DesignGallery from './components/DesignGallery.vue'
+import DesignCalculator from './components/DesignCalculator.vue'
 import './style.css'
 
 export default {
   extends: DefaultTheme,
   Layout,
   enhanceApp({ app }) {
+    app.component('DesignCalculator', DesignCalculator)
+    app.component('DesignFigure', DesignFigure)
+    app.component('DesignGallery', DesignGallery)
     app.component('ChapterHero', ChapterHero)
     app.component('ChapterCatalog', ChapterCatalog)
     app.component('TextbookToc', TextbookToc)

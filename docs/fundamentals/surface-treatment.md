@@ -179,3 +179,12 @@ description: 电镀、化学镀、阳极氧化、磷化、热喷涂、PVD 等表
   line-height: 1.8;
 }
 </style>
+
+
+## 结构与设计图解
+
+### 表面涂层与基体的分工
+
+<DesignFigure id="surface-coatings" />
+
+电镀、涂装与阳极氧化的成膜方式不同；阳极氧化仅适用于相应可氧化的金属基体。

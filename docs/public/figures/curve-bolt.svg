@@ -1,0 +1,145 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="600" viewBox="0 0 1000 600" role="img" aria-label="螺栓刚度曲线"><title>螺栓刚度曲线</title><style>:root{--vp-c-text-1:#203b50;--vp-c-text-2:#526879;--vp-c-text-3:#647b8e;--vp-c-bg:#fff;--vp-c-bg-soft:#f3f7fa;--vp-c-divider:#dbe5ed;--vp-c-brand-1:#176cc4;--vp-c-brand-soft:#dfeaf6;--vp-font-family-base:'PingFang SC','Microsoft YaHei',sans-serif;--vp-font-family-mono:ui-monospace,monospace;color:#203b50} .curve-chart {
+  margin: 24px 0;
+  padding: 16px 18px 13px;
+  overflow: hidden;
+  border: 1px solid var(--vp-c-divider);
+  border-radius: 14px;
+  background: var(--vp-c-bg-soft);
+}
+
+.curve-chart header {
+  display: flex;
+  align-items: baseline;
+  gap: 9px;
+  margin-bottom: 4px;
+}
+
+.curve-chart header span {
+  color: var(--vp-c-brand-1);
+  font-family: var(--vp-font-family-mono);
+  font-size: 8px;
+  letter-spacing: 0.1em;
+}
+
+.curve-chart header h4 {
+  margin: 0;
+  color: var(--vp-c-text-1);
+  font-size: 13px;
+}
+
+svg {
+  display: block;
+  width: 100%;
+  height: auto;
+  overflow: visible;
+}
+
+.grid path {
+  fill: none;
+  stroke: var(--vp-c-divider);
+  stroke-width: 0.7;
+}
+
+.axes path {
+  fill: none;
+  stroke: var(--vp-c-text-3);
+  stroke-width: 1.2;
+}
+
+.axes text {
+  fill: var(--vp-c-text-3);
+  font-family: var(--vp-font-family-mono);
+  font-size: 10px;
+  letter-spacing: 0.02em;
+  stroke: none;
+}
+
+.series path {
+  fill: none;
+}
+
+.curve-main {
+  stroke: var(--vp-c-brand-1);
+  stroke-width: 2.4;
+}
+
+.curve-alt {
+  stroke: #d28a1f;
+  stroke-width: 1.8;
+}
+
+.curve-alt2 {
+  stroke: #8a7bd8;
+  stroke-width: 1.6;
+}
+
+.guide {
+  stroke: var(--vp-c-text-3);
+  stroke-width: 1;
+  opacity: 0.55;
+}
+
+.accent-line {
+  stroke: #22a06b;
+  stroke-width: 1.8;
+}
+
+.accent-fill {
+  fill: #22a06b;
+  stroke: #22a06b;
+}
+
+.dot {
+  fill: var(--vp-c-brand-1);
+  stroke: var(--vp-c-bg-soft);
+  stroke-width: 2;
+}
+
+.dot-accent {
+  fill: #d28a1f;
+  stroke: var(--vp-c-bg-soft);
+  stroke-width: 2;
+}
+
+.small {
+  fill: var(--vp-c-text-2);
+  font-size: 10px;
+  stroke: none;
+}
+
+.tag {
+  fill: var(--vp-c-brand-1);
+  font-family: var(--vp-font-family-mono);
+  font-size: 10px;
+  font-weight: 700;
+  stroke: none;
+}
+
+.curve-alt-text {
+  fill: #d28a1f;
+}
+
+.curve-alt2-text {
+  fill: #8a7bd8;
+}
+
+.legend text {
+  fill: var(--vp-c-text-3);
+  font-family: var(--vp-font-family-mono);
+  font-size: 8px;
+  letter-spacing: 0.1em;
+}
+
+figcaption {
+  margin-top: 7px;
+  color: var(--vp-c-text-3);
+  font-size: 11px;
+  line-height: 1.6;
+}
+
+figcaption em {
+  color: var(--vp-c-text-3);
+  font-style: normal;
+  opacity: 0.8;
+}
+svg text{font-family:'PingFang SC','Microsoft YaHei',sans-serif} .asset-title{font-size:27px;font-weight:700;fill:#203b50}.asset-footer{font-size:15px;fill:#526879}</style><rect width="1000" height="600" rx="16" fill="white"/><text x="40" y="65" class="asset-title">螺栓刚度曲线</text><g class="curve-chart" transform="translate(104 110) scale(1.1)"><g class="grid"><path d="M80 60H680M80 120H680M80 180H680M80 240H680M80 300H680"></path><path d="M140 50V300M260 50V300M380 50V300M500 50V300M620 50V300"></path></g><g class="axes"><path d="M80 300H690M80 300V42"></path><path d="M690 300l-11-5v10zM80 42l-5 11h10z"></path><text x="360" y="340">变形 δ</text><text x="24" y="178" transform="rotate(-90 24 178)">力 F</text></g><g class="series"><path d="M160 280V160" class="guide"></path><path d="M160 160H585" class="guide" stroke-dasharray="5 5"></path><path d="M160 160L515 92" class="curve-main"></path><path d="M160 160L470 246" class="curve-alt"></path><path d="M160 160L470 160" class="guide"></path><path d="M470 160V246" class="accent-line"></path><path d="M470 246h48" class="guide" stroke-dasharray="4 4"></path><path d="M470 92h48" class="guide" stroke-dasharray="4 4"></path><path d="M535 246v-154" class="accent-line"></path><path d="M535 246l-5-10h10zM535 92l-5 10h10z" class="accent-fill"></path><text x="92" y="166" class="small">F₀</text><text x="498" y="86" class="small">F₂</text><text x="498" y="262" class="small">F₁</text><text x="545" y="174" class="small">F</text><text x="330" y="104" class="small">螺栓（C_b）</text><text x="270" y="264" class="small">被连接件（C_m）</text><circle cx="160" cy="160" r="4" class="dot"></circle></g><g class="legend"><text x="80" y="28">PRELOAD DIAGRAM</text><text x="630" y="28">SCHEMATIC</text></g></g><text x="40" y="575" class="asset-footer">教学示意 · 请结合对应章节中的模型假设、单位与适用条件阅读</text></svg>

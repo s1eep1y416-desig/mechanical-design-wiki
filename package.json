@@ -15,7 +15,10 @@
     "feishu:merge": "node tools/feishu-merge.mjs",
     "feishu:latex": "node tools/feishu-sync.mjs --latex && node tools/feishu-merge.mjs --latex",
     "feishu:upload": "bash tools/feishu-upload-latex.sh",
-    "feishu:setup": "bash tools/feishu-setup.sh"
+    "feishu:setup": "bash tools/feishu-setup.sh",
+    "test": "node --test tests/*.test.mjs && npm run figures:check",
+    "figures:generate": "node scripts/generate-figures.mjs && node scripts/export-existing-figures.mjs",
+    "figures:check": "node scripts/generate-figures.mjs --check && node scripts/export-existing-figures.mjs --check"
   },
   "devDependencies": {
     "markdown-it-mathjax3": "^4.3.2",

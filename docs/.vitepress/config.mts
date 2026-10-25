@@ -9,6 +9,7 @@ const sidebar = [
     text: '开始之前',
     items: [
       { text: '使用指南', link: '/guide/' },
+      { text: '82 张工程图解', link: '/figures/' },
       { text: '教材目录与页码', link: '/guide/textbook' },
       { text: '学习路线', link: '/guide/roadmap' },
       { text: '符号与约定', link: '/guide/conventions' }
@@ -167,7 +168,7 @@ export default defineConfig({
     logo: '/logo.svg',
     siteTitle: '机械设计知识库',
     nav: [
-      { text: '首页', link: '/' },
+      { text: '工程图解', link: '/figures/' },
       { text: '学习指南', link: '/guide/' },
       { text: '十八章', link: '/chapters/' },
       { text: '公式速查', link: '/appendix/formulas' },
