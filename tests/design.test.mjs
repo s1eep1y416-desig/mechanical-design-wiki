@@ -47,6 +47,52 @@ test("at least 75 unique teaching figures, each placed in its source chapter", (
       illustrations.some((f) => f.chapter === String(i).padStart(2, "0")),
     );
 });
+test("new teaching figures follow the content section they explain", () => {
+  const pages = new Map();
+  for (const f of illustrations.filter((item) => item.section)) {
+    const md =
+      pages.get(f.page) ??
+      fs.readFileSync(
+        new URL("../docs" + f.page + ".md", import.meta.url),
+        "utf8",
+      );
+    pages.set(f.page, md);
+    assert.ok(
+      !md.includes("## 结构与设计图解"),
+      `${f.page} must not collect figures at the end of the chapter`,
+    );
+    const position = md.indexOf(`<DesignFigure id="${f.id}"`);
+    assert.ok(position >= 0, `${f.id} must be embedded in its chapter`);
+    const headings = [...md.slice(0, position).matchAll(/^#{2,3} .+$/gm)].map(
+      (match) => match[0],
+    );
+    assert.equal(
+      headings.at(-1),
+      f.section,
+      `${f.id} must immediately follow its corresponding section`,
+    );
+  }
+  assert.equal(
+    illustrations.filter((item) => item.section).length,
+    51,
+    "all newly added chapter figures need an explicit content placement",
+  );
+  const calculators = [
+    ["/chapters/10-gear-drives", "gear", "### 受力参数实验"],
+    ["/chapters/16-springs", "spring", "### 刚度"],
+  ];
+  for (const [page, type, section] of calculators) {
+    const md = fs.readFileSync(
+      new URL("../docs" + page + ".md", import.meta.url),
+      "utf8",
+    );
+    const position = md.indexOf(`<DesignCalculator type="${type}"`);
+    const headings = [
+      ...md.slice(0, position).matchAll(/^#{2,3} .+$/gm),
+    ].map((match) => match[0]);
+    assert.equal(headings.at(-1), section);
+  }
+});
 test("SVGs are distinct, complete and synchronized with the reproducible generator", () => {
   const bodies = new Set();
   for (const [i, f] of illustrations
@@ -143,12 +189,20 @@ test("third strength theory reduces to twice shear in pure torsion and matches w
   }
 });
 
-test('all 82 gallery figures exist as standalone downloadable SVGs', () => {
-  const files = fs.readdirSync(new URL('../docs/public/figures/', import.meta.url)).filter(f => f.endsWith('.svg'));
+test("all 82 gallery figures exist as standalone downloadable SVGs", () => {
+  const files = fs
+    .readdirSync(new URL("../docs/public/figures/", import.meta.url))
+    .filter((f) => f.endsWith(".svg"));
   assert.equal(files.length, illustrations.length);
   for (const f of illustrations) {
-    const svg = fs.readFileSync(new URL('../docs/public/figures/' + f.id + '.svg', import.meta.url), 'utf8');
+    const svg = fs.readFileSync(
+      new URL("../docs/public/figures/" + f.id + ".svg", import.meta.url),
+      "utf8",
+    );
     assert.match(svg, /xmlns="http:\/\/www.w3.org\/2000\/svg"/);
-    assert.ok(!/\sdata-v-[0-9a-f]+(?=[ >])/.test(svg), 'SSR boolean attributes must not leak into SVG XML');
+    assert.ok(
+      !/\sdata-v-[0-9a-f]+(?=[ >])/.test(svg),
+      "SSR boolean attributes must not leak into SVG XML",
+    );
   }
 });

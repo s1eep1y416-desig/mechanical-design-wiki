@@ -7,6 +7,7 @@ export const illustrations = [
     chapter: "01",
     page: "/chapters/01-introduction",
     kind: "svg",
+    section: "## 1.1 机械、机器与机构",
   },
   {
     id: "component-assembly",
@@ -15,6 +16,7 @@ export const illustrations = [
     chapter: "01",
     page: "/chapters/01-introduction",
     kind: "svg",
+    section: "## 1.2 这门课的研究对象",
   },
   {
     id: "load-path",
@@ -23,6 +25,7 @@ export const illustrations = [
     chapter: "01",
     page: "/chapters/01-introduction",
     kind: "svg",
+    section: "## 1.4 机械设计的一般语境",
   },
   {
     id: "design-process",
@@ -31,6 +34,7 @@ export const illustrations = [
     chapter: "02",
     page: "/chapters/02-design-fundamentals",
     kind: "svg",
+    section: "## 2.2 设计机器的一般程序",
   },
   {
     id: "failure-modes",
@@ -39,6 +43,7 @@ export const illustrations = [
     chapter: "02",
     page: "/chapters/02-design-fundamentals",
     kind: "svg",
+    section: "## 2.4 机械零件的主要失效形式",
   },
   {
     id: "design-criteria",
@@ -47,6 +52,7 @@ export const illustrations = [
     chapter: "02",
     page: "/chapters/02-design-fundamentals",
     kind: "svg",
+    section: "## 2.6 机械零件的设计准则",
   },
   {
     id: "material-selection",
@@ -55,6 +61,7 @@ export const illustrations = [
     chapter: "02",
     page: "/chapters/02-design-fundamentals",
     kind: "svg",
+    section: "### 材料选择要考虑什么",
   },
   {
     id: "stress-cycle",
@@ -63,6 +70,7 @@ export const illustrations = [
     chapter: "03",
     page: "/chapters/03-strength",
     kind: "svg",
+    section: "## 3.1 应力的循环特性",
   },
   {
     id: "notch-stress",
@@ -71,6 +79,7 @@ export const illustrations = [
     chapter: "03",
     page: "/chapters/03-strength",
     kind: "svg",
+    section: "### 综合影响系数",
   },
   {
     id: "film-regimes",
@@ -79,6 +88,7 @@ export const illustrations = [
     chapter: "04",
     page: "/chapters/04-friction-wear-lubrication",
     kind: "svg",
+    section: "## 4.1 四种摩擦状态",
   },
   {
     id: "wear-modes",
@@ -87,6 +97,7 @@ export const illustrations = [
     chapter: "04",
     page: "/chapters/04-friction-wear-lubrication",
     kind: "svg",
+    section: "## 4.2 磨损的类型",
   },
   {
     id: "lubrication-circuit",
@@ -95,6 +106,7 @@ export const illustrations = [
     chapter: "04",
     page: "/chapters/04-friction-wear-lubrication",
     kind: "svg",
+    section: "## 4.4 润滑方法",
   },
   {
     id: "thread-geometry",
@@ -103,6 +115,7 @@ export const illustrations = [
     chapter: "05",
     page: "/chapters/05-threaded-connections",
     kind: "svg",
+    section: "## 5.1 螺纹的主要参数",
   },
   {
     id: "bolt-joint-types",
@@ -111,6 +124,7 @@ export const illustrations = [
     chapter: "05",
     page: "/chapters/05-threaded-connections",
     kind: "svg",
+    section: "## 5.2 螺纹连接的基本类型",
   },
   {
     id: "locking-methods",
@@ -119,6 +133,7 @@ export const illustrations = [
     chapter: "05",
     page: "/chapters/05-threaded-connections",
     kind: "svg",
+    section: "### 防松",
   },
   {
     id: "spline-section",
@@ -127,6 +142,7 @@ export const illustrations = [
     chapter: "06",
     page: "/chapters/06-keys-splines-pins",
     kind: "svg",
+    section: "## 6.2 花键连接",
   },
   {
     id: "key-load",
@@ -135,6 +151,7 @@ export const illustrations = [
     chapter: "06",
     page: "/chapters/06-keys-splines-pins",
     kind: "svg",
+    section: "### 强度计算",
   },
   {
     id: "pin-joints",
@@ -143,6 +160,7 @@ export const illustrations = [
     chapter: "06",
     page: "/chapters/06-keys-splines-pins",
     kind: "svg",
+    section: "## 6.4 销连接",
   },
   {
     id: "rivet-lap",
@@ -151,6 +169,7 @@ export const illustrations = [
     chapter: "07",
     page: "/chapters/07-riveting-welding-bonding",
     kind: "svg",
+    section: "### 强度计算",
   },
   {
     id: "weld-throat",
@@ -159,6 +178,7 @@ export const illustrations = [
     chapter: "07",
     page: "/chapters/07-riveting-welding-bonding",
     kind: "svg",
+    section: "### 角焊缝强度",
   },
   {
     id: "adhesive-lap",
@@ -167,6 +187,7 @@ export const illustrations = [
     chapter: "07",
     page: "/chapters/07-riveting-welding-bonding",
     kind: "svg",
+    section: "### 接头设计原则",
   },
   {
     id: "press-fit",
@@ -175,6 +196,7 @@ export const illustrations = [
     chapter: "07",
     page: "/chapters/07-riveting-welding-bonding",
     kind: "svg",
+    section: "### 承载能力",
   },
   {
     id: "v-belt-section",
@@ -183,6 +205,7 @@ export const illustrations = [
     chapter: "08",
     page: "/chapters/08-belt-drives",
     kind: "svg",
+    section: "### 带轮结构",
   },
   {
     id: "belt-tensioner",
@@ -191,6 +214,7 @@ export const illustrations = [
     chapter: "08",
     page: "/chapters/08-belt-drives",
     kind: "svg",
+    section: "### 张紧",
   },
   {
     id: "chain-exploded",
@@ -199,6 +223,7 @@ export const illustrations = [
     chapter: "09",
     page: "/chapters/09-chain-drives",
     kind: "svg",
+    section: "## 9.2 滚子链的结构",
   },
   {
     id: "chain-wear",
@@ -207,6 +232,7 @@ export const illustrations = [
     chapter: "09",
     page: "/chapters/09-chain-drives",
     kind: "svg",
+    section: "## 9.6 链传动的布置与维护",
   },
   {
     id: "gear-dimensions",
@@ -215,6 +241,7 @@ export const illustrations = [
     chapter: "10",
     page: "/chapters/10-gear-drives",
     kind: "svg",
+    section: "### 模数",
   },
   {
     id: "gear-failures",
@@ -223,6 +250,7 @@ export const illustrations = [
     chapter: "10",
     page: "/chapters/10-gear-drives",
     kind: "svg",
+    section: "### 五种典型失效",
   },
   {
     id: "helical-contact",
@@ -231,6 +259,7 @@ export const illustrations = [
     chapter: "10",
     page: "/chapters/10-gear-drives",
     kind: "svg",
+    section: "### 斜齿圆柱齿轮",
   },
   {
     id: "worm-geometry",
@@ -239,6 +268,7 @@ export const illustrations = [
     chapter: "11",
     page: "/chapters/11-worm-drives",
     kind: "svg",
+    section: "### 主要几何关系",
   },
   {
     id: "worm-thermal",
@@ -247,6 +277,7 @@ export const illustrations = [
     chapter: "11",
     page: "/chapters/11-worm-drives",
     kind: "svg",
+    section: "### 热平衡",
   },
   {
     id: "bearing-split",
@@ -255,6 +286,7 @@ export const illustrations = [
     chapter: "12",
     page: "/chapters/12-sliding-bearings",
     kind: "svg",
+    section: "## 12.1 滑动轴承的类型",
   },
   {
     id: "hydrodynamic-wedge",
@@ -263,6 +295,7 @@ export const illustrations = [
     chapter: "12",
     page: "/chapters/12-sliding-bearings",
     kind: "svg",
+    section: "### 形成条件",
   },
   {
     id: "thrust-pad",
@@ -271,6 +304,7 @@ export const illustrations = [
     chapter: "12",
     page: "/chapters/12-sliding-bearings",
     kind: "svg",
+    section: "### 承载能力",
   },
   {
     id: "bearing-types",
@@ -279,6 +313,7 @@ export const illustrations = [
     chapter: "13",
     page: "/chapters/13-rolling-bearings",
     kind: "svg",
+    section: "## 13.1 主要类型与特点",
   },
   {
     id: "bearing-arrangement",
@@ -287,6 +322,7 @@ export const illustrations = [
     chapter: "13",
     page: "/chapters/13-rolling-bearings",
     kind: "svg",
+    section: "### 轴向固定方式",
   },
   {
     id: "bearing-db-df",
@@ -295,6 +331,7 @@ export const illustrations = [
     chapter: "13",
     page: "/chapters/13-rolling-bearings",
     kind: "svg",
+    section: "### 面对面与背对背",
   },
   {
     id: "coupling-misalignment",
@@ -303,6 +340,7 @@ export const illustrations = [
     chapter: "14",
     page: "/chapters/14-couplings-clutches",
     kind: "svg",
+    section: "### 挠性联轴器",
   },
   {
     id: "clutch-friction",
@@ -311,6 +349,7 @@ export const illustrations = [
     chapter: "14",
     page: "/chapters/14-couplings-clutches",
     kind: "svg",
+    section: "### 摩擦离合器",
   },
   {
     id: "shaft-fillet",
@@ -319,6 +358,7 @@ export const illustrations = [
     chapter: "15",
     page: "/chapters/15-shafts",
     kind: "svg",
+    section: "### 轴向定位",
   },
   {
     id: "shaft-torsion",
@@ -327,6 +367,7 @@ export const illustrations = [
     chapter: "15",
     page: "/chapters/15-shafts",
     kind: "svg",
+    section: "### 扭转刚度",
   },
   {
     id: "spring-end",
@@ -335,6 +376,7 @@ export const illustrations = [
     chapter: "16",
     page: "/chapters/16-springs",
     kind: "svg",
+    section: "### 端部结构",
   },
   {
     id: "spring-stability",
@@ -343,6 +385,7 @@ export const illustrations = [
     chapter: "16",
     page: "/chapters/16-springs",
     kind: "svg",
+    section: "### 稳定性",
   },
   {
     id: "housing-ribs",
@@ -351,6 +394,7 @@ export const illustrations = [
     chapter: "17",
     page: "/chapters/17-frames-housings",
     kind: "svg",
+    section: "### 加强肋",
   },
   {
     id: "casting-details",
@@ -359,6 +403,7 @@ export const illustrations = [
     chapter: "17",
     page: "/chapters/17-frames-housings",
     kind: "svg",
+    section: "### 铸造工艺性",
   },
   {
     id: "housing-datums",
@@ -367,6 +412,7 @@ export const illustrations = [
     chapter: "17",
     page: "/chapters/17-frames-housings",
     kind: "svg",
+    section: "## 17.5 精度与工艺",
   },
   {
     id: "reducer-layout",
@@ -375,6 +421,7 @@ export const illustrations = [
     chapter: "18",
     page: "/chapters/18-reducers-variators",
     kind: "svg",
+    section: "### 计算各轴参数",
   },
   {
     id: "reducer-accessories",
@@ -383,6 +430,7 @@ export const illustrations = [
     chapter: "18",
     page: "/chapters/18-reducers-variators",
     kind: "svg",
+    section: "## 18.6 减速器附件",
   },
   {
     id: "fits-overview",
@@ -391,6 +439,7 @@ export const illustrations = [
     chapter: "fits",
     page: "/fundamentals/fits",
     kind: "svg",
+    section: "### 间隙与过盈的极限值",
   },
   {
     id: "surface-coatings",
@@ -399,6 +448,7 @@ export const illustrations = [
     chapter: "surface-treatment",
     page: "/fundamentals/surface-treatment",
     kind: "svg",
+    section: "## 2. 常见表面处理工艺",
   },
   {
     id: "heat-treatment",
@@ -407,6 +457,7 @@ export const illustrations = [
     chapter: "surface-heat-treatment",
     page: "/fundamentals/surface-heat-treatment",
     kind: "svg",
+    section: "## 2. 常见工艺",
   },
   {
     id: "overview-belt",
