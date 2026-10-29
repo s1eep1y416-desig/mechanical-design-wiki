@@ -5,6 +5,7 @@ import { illustrations } from "../../data/illustrations.mjs";
 import DesignFigure from "./DesignFigure.vue";
 import CurveChart from "./CurveChart.vue";
 import ForceDiagram from "./ForceDiagram.vue";
+import { targetWithSection } from "../utils/link-targets.mjs";
 const query = ref(""),
   chapter = ref(""),
   limit = ref(24);
@@ -28,15 +29,18 @@ const filtered = computed(() =>
 watch([query, chapter], () => (limit.value = 24));
 function choose(f: (typeof illustrations)[number]) {
   selected.value = f;
-  document
-    .getElementById("selected-figure")
-    ?.scrollIntoView({
-      behavior: window.matchMedia("(prefers-reduced-motion: reduce)").matches
-        ? "auto"
-        : "smooth",
-      block: "start",
-    });
+  document.getElementById("selected-figure")?.scrollIntoView({
+    behavior: window.matchMedia("(prefers-reduced-motion: reduce)").matches
+      ? "auto"
+      : "smooth",
+    block: "start",
+  });
 }
+const selectedTarget = computed(() =>
+  withBase(
+    targetWithSection(selected.value.page, selected.value.section || ""),
+  ),
+);
 </script>
 <template>
   <div class="design-gallery">
@@ -54,7 +58,7 @@ function choose(f: (typeof illustrations)[number]) {
           {{
             names[selected.chapter] || "第 " + selected.chapter + " 章"
           }}</span
-        ><a :href="withBase(selected.page)">阅读对应章节 →</a>
+        ><a :href="selectedTarget">阅读对应知识点 →</a>
       </div>
       <DesignFigure
         v-if="selected.kind === 'svg'"
@@ -64,7 +68,13 @@ function choose(f: (typeof illustrations)[number]) {
         :key="selected.id"
         :type="selected.type"
       /><CurveChart v-else :key="selected.id" :type="selected.type" />
-    <a v-if="selected.kind !== 'svg'" :href="withBase('/figures/' + selected.id + '.svg')" :download="selected.id + '.svg'">下载此图 SVG</a>
+      <a
+        v-if="selected.kind !== 'svg'"
+        class="selected-download"
+        :href="withBase('/figures/' + selected.id + '.svg')"
+        :download="selected.id + '.svg'"
+        >下载此图 SVG</a
+      >
     </section>
     <div class="gallery-filter">
       <label
@@ -140,6 +150,11 @@ function choose(f: (typeof illustrations)[number]) {
 }
 #selected-figure {
   scroll-margin-top: 90px;
+}
+.selected-download {
+  display: inline-block;
+  margin: 10px 0 20px;
+  font-size: 13px;
 }
 .gallery-filter {
   display: flex;

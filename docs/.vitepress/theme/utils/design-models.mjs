@@ -69,3 +69,53 @@ export function shaftEquivalent({ diameter, moment, torque, alpha = 0.6 }) {
     fourth: Math.hypot(bending, Math.sqrt(3) * alpha * shear),
   };
 }
+
+export function boltJointModel({
+  preload = 15000,
+  workLoad = 10000,
+  boltStiffness = 1,
+  memberStiffness = 4,
+} = {}) {
+  if (preload < 0 || workLoad < 0 || boltStiffness <= 0 || memberStiffness <= 0)
+    throw new RangeError("Invalid bolt-joint input");
+  const loadFraction = boltStiffness / (boltStiffness + memberStiffness);
+  const preSeparationBoltLoad = preload + loadFraction * workLoad;
+  const residual = preload - (1 - loadFraction) * workLoad;
+  const separationLoad = preload / (1 - loadFraction);
+  const separated = residual <= 0;
+  return {
+    loadFraction,
+    boltLoad: separated ? workLoad : preSeparationBoltLoad,
+    residual: Math.max(0, residual),
+    separationLoad,
+    separated,
+  };
+}
+
+export function bearingLifeModel({
+  dynamicRating = 30,
+  equivalentLoad = 5,
+  speed = 1500,
+  exponent = 3,
+} = {}) {
+  if (dynamicRating <= 0 || equivalentLoad <= 0 || speed <= 0 || exponent <= 0)
+    throw new RangeError("Invalid bearing-life input");
+  const millionRevolutions = (dynamicRating / equivalentLoad) ** exponent;
+  const hours = (1e6 / (60 * speed)) * millionRevolutions;
+  return { millionRevolutions, hours };
+}
+
+export function beltForceModel({
+  power = 5.5,
+  speed = 12,
+  friction = 0.3,
+  wrap = 165,
+} = {}) {
+  if (power <= 0 || speed <= 0 || friction <= 0 || wrap <= 0 || wrap >= 360)
+    throw new RangeError("Invalid belt-force input");
+  const effective = (1000 * power) / speed;
+  const ratio = Math.exp((friction * (wrap * Math.PI)) / 180);
+  const slack = effective / (ratio - 1);
+  const tight = slack + effective;
+  return { effective, ratio, slack, tight, radial: tight + slack };
+}

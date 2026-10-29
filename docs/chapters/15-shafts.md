@@ -141,6 +141,8 @@ $$
 - 脉动转矩：$\alpha\approx0.6$；
 - 频繁正反转：$\alpha\approx1$。
 
+<EngineeringCalculator type="shaft" />
+
 ### 疲劳强度精确校核
 
 对重要轴，要按危险截面的应力集中、尺寸系数和表面质量计算安全系数：

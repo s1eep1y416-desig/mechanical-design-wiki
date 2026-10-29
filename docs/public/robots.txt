@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://s1eep1y416-desig.github.io/mechanical-design-wiki/sitemap.xml

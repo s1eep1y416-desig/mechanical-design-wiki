@@ -1,74 +1,77 @@
 <script setup lang="ts">
-import { computed, nextTick, onMounted, onUnmounted, ref, watch } from 'vue'
-import { useData } from 'vitepress'
+import { computed, nextTick, onMounted, onUnmounted, ref, watch } from "vue";
+import { useData } from "vitepress";
 
-type BgMode = 'default' | 'white' | 'black'
+type BgMode = "default" | "white" | "black";
 
-const { isDark } = useData()
-const bg = ref<BgMode>('default')
-const scrolled = ref(false)
-const storageKey = 'mdwiki-bg'
-let syncing = false
+const { isDark } = useData();
+const bg = ref<BgMode>("default");
+const scrolled = ref(false);
+const storageKey = "mdwiki-bg";
+let syncing = false;
 
-const showTop = computed(() => scrolled.value)
+const showTop = computed(() => scrolled.value);
 
 function clearBg() {
-  bg.value = 'default'
-  document.documentElement.removeAttribute('data-bg')
-  localStorage.removeItem(storageKey)
+  bg.value = "default";
+  document.documentElement.removeAttribute("data-bg");
+  localStorage.removeItem(storageKey);
 }
 
-function setBg(mode: 'white' | 'black') {
+function setBg(mode: "white" | "black") {
   if (bg.value === mode) {
-    clearBg()
-    return
+    clearBg();
+    return;
   }
-  bg.value = mode
-  document.documentElement.dataset.bg = mode
-  localStorage.setItem(storageKey, mode)
-  syncing = true
-  isDark.value = mode === 'black'
-  document.documentElement.classList.toggle('dark', mode === 'black')
-  localStorage.setItem('vitepress-theme-appearance', mode === 'black' ? 'dark' : 'light')
+  bg.value = mode;
+  document.documentElement.dataset.bg = mode;
+  localStorage.setItem(storageKey, mode);
+  syncing = true;
+  isDark.value = mode === "black";
+  document.documentElement.classList.toggle("dark", mode === "black");
+  localStorage.setItem(
+    "vitepress-theme-appearance",
+    mode === "black" ? "dark" : "light",
+  );
   nextTick(() => {
-    syncing = false
-  })
+    syncing = false;
+  });
 }
 
 function scrollTop() {
-  window.scrollTo({ top: 0, behavior: 'smooth' })
+  window.scrollTo({ top: 0, behavior: "smooth" });
 }
 
 function onScroll() {
-  scrolled.value = window.scrollY > 260
+  scrolled.value = window.scrollY > 260;
 }
 
 onMounted(() => {
-  const saved = localStorage.getItem(storageKey)
-  if (saved === 'white' || saved === 'black') {
-    bg.value = saved
-    document.documentElement.dataset.bg = saved
-    syncing = true
-    isDark.value = saved === 'black'
-    document.documentElement.classList.toggle('dark', saved === 'black')
+  const saved = localStorage.getItem(storageKey);
+  if (saved === "white" || saved === "black") {
+    bg.value = saved;
+    document.documentElement.dataset.bg = saved;
+    syncing = true;
+    isDark.value = saved === "black";
+    document.documentElement.classList.toggle("dark", saved === "black");
     nextTick(() => {
-      syncing = false
-    })
+      syncing = false;
+    });
   }
-  onScroll()
-  window.addEventListener('scroll', onScroll, { passive: true })
-})
+  onScroll();
+  window.addEventListener("scroll", onScroll, { passive: true });
+});
 
 onUnmounted(() => {
-  window.removeEventListener('scroll', onScroll)
-})
+  window.removeEventListener("scroll", onScroll);
+});
 
 watch(isDark, (dark) => {
-  if (syncing) return
-  if ((bg.value === 'white' && dark) || (bg.value === 'black' && !dark)) {
-    clearBg()
+  if (syncing) return;
+  if ((bg.value === "white" && dark) || (bg.value === "black" && !dark)) {
+    clearBg();
   }
-})
+});
 </script>
 
 <template>
@@ -129,10 +132,11 @@ watch(isDark, (dark) => {
 }
 
 .bg-dot {
-  width: 18px;
-  height: 18px;
-  border-radius: 50%;
-  border: 2px solid var(--vp-c-divider);
+  position: relative;
+  width: 44px;
+  height: 44px;
+  border: 0;
+  background: transparent;
   cursor: pointer;
   transition:
     transform 0.16s,
@@ -140,27 +144,39 @@ watch(isDark, (dark) => {
     border-color 0.16s;
 }
 
+.bg-dot::before {
+  position: absolute;
+  inset: 11px;
+  border: 2px solid var(--vp-c-divider);
+  border-radius: 50%;
+  content: "";
+}
+
 .bg-dot:hover {
   transform: scale(1.12);
 }
 
 .bg-dot.active {
+  transform: scale(1.06);
+}
+
+.bg-dot.active::before {
   border-color: var(--vp-c-brand-1);
   box-shadow: 0 0 0 2px var(--vp-c-brand-soft);
 }
 
-.bg-dot--white {
+.bg-dot--white::before {
   background: #fff;
 }
 
-.bg-dot--black {
+.bg-dot--black::before {
   background: #000;
 }
 
 .to-top {
   display: grid;
-  width: 30px;
-  height: 30px;
+  width: 44px;
+  height: 44px;
   padding: 0;
   border: 0;
   border-radius: 50%;

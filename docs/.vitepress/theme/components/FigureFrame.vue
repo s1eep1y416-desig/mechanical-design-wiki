@@ -121,6 +121,7 @@ onBeforeUnmount(() => {
 }
 .figure-tools button,
 .figure-tools select {
+  min-height: 44px;
   font: inherit;
   color: var(--vp-c-brand-1);
   padding: 6px 10px;

@@ -7,6 +7,8 @@
   "scripts": {
     "dev": "vitepress dev docs --host 127.0.0.1",
     "build": "vitepress build docs",
+    "postbuild": "node scripts/validate-build.mjs",
+    "audit:prod": "npm audit --omit=dev --audit-level=high --registry=https://registry.npmjs.org",
     "preview": "vitepress preview docs --host 127.0.0.1",
     "dev:theory": "vitepress dev theory/docs --host 127.0.0.1",
     "build:theory": "vitepress build theory/docs",
@@ -23,9 +25,9 @@
   "devDependencies": {
     "markdown-it-mathjax3": "^4.3.2",
     "vitepress": "1.6.4",
-    "vue": "^3.5.13"
+    "vue": "^3.5.44"
   },
   "dependencies": {
-    "katex": "^0.16.22"
+    "katex": "^0.19.1"
   }
 }

@@ -219,6 +219,8 @@ $$
 
 <CurveChart type="bolt" />
 
+<EngineeringCalculator type="bolt" />
+
 ### 受轴向变载荷
 
 螺栓的总拉力在 $F_1$ 与 $F_2$ 之间变化。螺栓的载荷幅为：

@@ -575,6 +575,7 @@ export const illustrations = [
     page: "/chapters/03-strength",
     title: "疲劳曲线曲线",
     note: "结合章节中的假设、坐标和适用条件阅读。",
+    section: "## 3.2 材料的疲劳曲线",
   },
   {
     id: "curve-limit",
@@ -584,6 +585,7 @@ export const illustrations = [
     page: "/chapters/03-strength",
     title: "疲劳判据曲线",
     note: "结合章节中的假设、坐标和适用条件阅读。",
+    section: "## 3.3 材料的极限应力线图",
   },
   {
     id: "curve-contact",
@@ -593,6 +595,7 @@ export const illustrations = [
     page: "/chapters/03-strength",
     title: "接触应力曲线",
     note: "结合章节中的假设、坐标和适用条件阅读。",
+    section: "## 3.6 机械零件的接触强度",
   },
   {
     id: "curve-stribeck",
@@ -602,6 +605,7 @@ export const illustrations = [
     page: "/chapters/04-friction-wear-lubrication",
     title: "摩擦状态曲线",
     note: "结合章节中的假设、坐标和适用条件阅读。",
+    section: "## 4.1 四种摩擦状态",
   },
   {
     id: "curve-wear",
@@ -611,6 +615,7 @@ export const illustrations = [
     page: "/chapters/04-friction-wear-lubrication",
     title: "磨损阶段曲线",
     note: "结合章节中的假设、坐标和适用条件阅读。",
+    section: "### 磨损的三个阶段",
   },
   {
     id: "force-bolts",
@@ -620,6 +625,7 @@ export const illustrations = [
     page: "/chapters/05-threaded-connections",
     title: "螺栓组受力图解",
     note: "结合章节中的假设、坐标和适用条件阅读。",
+    section: "### 受转矩",
   },
   {
     id: "curve-bolt",
@@ -629,6 +635,7 @@ export const illustrations = [
     page: "/chapters/05-threaded-connections",
     title: "螺栓刚度曲线",
     note: "结合章节中的假设、坐标和适用条件阅读。",
+    section: "### 受预紧力和轴向工作载荷的紧螺栓连接",
   },
   {
     id: "force-belt",
@@ -638,6 +645,7 @@ export const illustrations = [
     page: "/chapters/08-belt-drives",
     title: "带传动图解",
     note: "结合章节中的假设、坐标和适用条件阅读。",
+    section: "## 8.2 受力分析",
   },
   {
     id: "curve-belt",
@@ -647,6 +655,7 @@ export const illustrations = [
     page: "/chapters/08-belt-drives",
     title: "带传动曲线",
     note: "结合章节中的假设、坐标和适用条件阅读。",
+    section: "## 8.3 带的应力",
   },
   {
     id: "curve-chain",
@@ -656,6 +665,7 @@ export const illustrations = [
     page: "/chapters/09-chain-drives",
     title: "链传动曲线",
     note: "结合章节中的假设、坐标和适用条件阅读。",
+    section: "### 多边形效应",
   },
   {
     id: "force-chain",
@@ -665,6 +675,7 @@ export const illustrations = [
     page: "/chapters/09-chain-drives",
     title: "链传动图解",
     note: "结合章节中的假设、坐标和适用条件阅读。",
+    section: "## 9.4 受力分析",
   },
   {
     id: "force-spur",
@@ -674,6 +685,7 @@ export const illustrations = [
     page: "/chapters/10-gear-drives",
     title: "直齿轮受力图解",
     note: "结合章节中的假设、坐标和适用条件阅读。",
+    section: "### 直齿圆柱齿轮",
   },
   {
     id: "force-helical",
@@ -683,6 +695,7 @@ export const illustrations = [
     page: "/chapters/10-gear-drives",
     title: "斜齿轮受力图解",
     note: "结合章节中的假设、坐标和适用条件阅读。",
+    section: "### 斜齿圆柱齿轮",
   },
   {
     id: "force-bevel",
@@ -692,6 +705,7 @@ export const illustrations = [
     page: "/chapters/10-gear-drives",
     title: "锥齿轮受力图解",
     note: "结合章节中的假设、坐标和适用条件阅读。",
+    section: "### 直齿锥齿轮",
   },
   {
     id: "force-worm",
@@ -701,6 +715,7 @@ export const illustrations = [
     page: "/chapters/11-worm-drives",
     title: "蜗杆受力图解",
     note: "结合章节中的假设、坐标和适用条件阅读。",
+    section: "## 11.3 受力分析",
   },
   {
     id: "curve-efficiency",
@@ -710,6 +725,7 @@ export const illustrations = [
     page: "/chapters/11-worm-drives",
     title: "蜗杆效率曲线",
     note: "结合章节中的假设、坐标和适用条件阅读。",
+    section: "### 效率",
   },
   {
     id: "curve-bearing",
@@ -719,6 +735,7 @@ export const illustrations = [
     page: "/chapters/13-rolling-bearings",
     title: "轴承寿命曲线",
     note: "结合章节中的假设、坐标和适用条件阅读。",
+    section: "### 基本额定寿命",
   },
   {
     id: "force-shaft",
@@ -728,6 +745,7 @@ export const illustrations = [
     page: "/chapters/15-shafts",
     title: "轴的支反力与弯矩图解",
     note: "结合章节中的假设、坐标和适用条件阅读。",
+    section: "### 按弯扭合成强度校核",
   },
   {
     id: "curve-spring",
@@ -737,5 +755,6 @@ export const illustrations = [
     page: "/chapters/16-springs",
     title: "弹簧特性曲线",
     note: "结合章节中的假设、坐标和适用条件阅读。",
+    section: "### 刚度",
   },
 ];

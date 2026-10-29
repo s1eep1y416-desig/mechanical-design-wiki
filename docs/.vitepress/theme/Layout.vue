@@ -1,8 +1,9 @@
 <script setup lang="ts">
-import DefaultTheme from 'vitepress/theme'
-import ReadingProgress from './components/ReadingProgress.vue'
-import ReadingTools from './components/ReadingTools.vue'
-import ReadingSidebar from './components/ReadingSidebar.vue'
+import DefaultTheme from "vitepress/theme";
+import ReadingProgress from "./components/ReadingProgress.vue";
+import ReadingTools from "./components/ReadingTools.vue";
+import ReadingSidebar from "./components/ReadingSidebar.vue";
+import RelatedTopics from "./components/RelatedTopics.vue";
 </script>
 
 <template>
@@ -23,6 +24,9 @@ import ReadingSidebar from './components/ReadingSidebar.vue'
         <em>END OF PAGE</em>
       </div>
     </template>
+    <template #doc-after>
+      <RelatedTopics />
+    </template>
     <template #layout-bottom>
       <ReadingTools />
     </template>
@@ -38,8 +42,14 @@ import ReadingSidebar from './components/ReadingSidebar.vue'
   margin-bottom: 12px;
   border-bottom: 1px solid var(--vp-c-divider);
 }
-.sidebar-heading strong { font-size: 14px; color: var(--vp-c-text-1); }
-.sidebar-heading span { font-size: 11px; color: var(--vp-c-text-3); }
+.sidebar-heading strong {
+  font-size: 14px;
+  color: var(--vp-c-text-1);
+}
+.sidebar-heading span {
+  font-size: 11px;
+  color: var(--vp-c-text-3);
+}
 .aside-end {
   display: flex;
   align-items: center;

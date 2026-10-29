@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">机械设计知识库</title>
+  <desc id="desc">十八章、八十二张工程图解与六十六个核心公式</desc>
+  <defs>
+    <linearGradient id="bg" x2="1" y2="1">
+      <stop stop-color="#071523"/>
+      <stop offset="1" stop-color="#123454"/>
+    </linearGradient>
+    <radialGradient id="metal" cx="35%" cy="28%">
+      <stop stop-color="#f2f8fc"/>
+      <stop offset=".45" stop-color="#a9c3d5"/>
+      <stop offset="1" stop-color="#55758d"/>
+    </radialGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <path d="M0 512C250 420 430 590 720 480S1040 390 1200 440V630H0Z" fill="#0b63ce" opacity=".16"/>
+  <g transform="translate(930 315)" fill="url(#metal)" stroke="#d9e7f1" stroke-width="4">
+    <path d="M0-170 25-145 62-155 75-120 112-108 108-70 145-48 130-12 170 15 148 48 164 84 125 98 116 137 77 132 52 165 20 145-15 170-42 140-80 153-95 116-134 110-128 70-160 44-140 10-168-18-140-48-150-85-112-100-102-140-62-134-35-166Z"/>
+    <circle r="82" fill="#0d2133"/>
+    <circle r="34" fill="#7ba4bd"/>
+  </g>
+  <g transform="translate(760 430) scale(.58)" fill="url(#metal)" stroke="#d9e7f1" stroke-width="6">
+    <path d="M0-170 25-145 62-155 75-120 112-108 108-70 145-48 130-12 170 15 148 48 164 84 125 98 116 137 77 132 52 165 20 145-15 170-42 140-80 153-95 116-134 110-128 70-160 44-140 10-168-18-140-48-150-85-112-100-102-140-62-134-35-166Z"/>
+    <circle r="75" fill="#0d2133"/>
+    <circle r="28" fill="#7ba4bd"/>
+  </g>
+  <text x="80" y="115" fill="#6eb3ff" font-family="ui-monospace, monospace" font-size="24" letter-spacing="5">MECHANICAL DESIGN WIKI</text>
+  <text x="80" y="235" fill="white" font-family="PingFang SC, Microsoft YaHei, sans-serif" font-size="72" font-weight="700">机械设计知识库</text>
+  <text x="84" y="315" fill="#c9d8e5" font-family="PingFang SC, Microsoft YaHei, sans-serif" font-size="30">把公式、结构、受力和工程直觉连成一张知识地图</text>
+  <g font-family="PingFang SC, Microsoft YaHei, sans-serif" font-size="26">
+    <text x="84" y="425" fill="#6eb3ff">18 章</text>
+    <text x="205" y="425" fill="#71889b">·</text>
+    <text x="240" y="425" fill="#6eb3ff">82 张工程图解</text>
+    <text x="475" y="425" fill="#71889b">·</text>
+    <text x="510" y="425" fill="#6eb3ff">66 个核心公式</text>
+  </g>
+</svg>
